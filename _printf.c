@@ -22,7 +22,7 @@ int _print(const char *format, ...)
 		return (-1);
 	for (p = (char *)format; *p; p++)
 	{
-		int params(&params, ap);
+		int_params(&params, ap);
 		if (*p != '%')
 		{
 			sum += _putchar(*p);
@@ -35,7 +35,7 @@ int _print(const char *format, ...)
 			p++; /* next char */
 		}
 		p = get_width(p, &params, ap);
-		p = get_precision(p, &paams, ap);
+		p = get_precision(p, &params, ap);
 		if (get_modifier(p, &params))
 			p++;
 		if (!get_specifier(p))
