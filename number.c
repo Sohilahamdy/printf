@@ -42,7 +42,7 @@ char *covert(long int num, int base, int flags, params_t *params)
  * @ap: argument pointer
  * @params: the parameters struct
  *
- * Return: number bytes printed
+ * Return: bytes printed
  */
 int print_unsigned(va_list ap, params_t *params)
 {

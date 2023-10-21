@@ -13,7 +13,7 @@
 
 #define NULL_STRING "(null)"
 
-#define PARAMS_INIT { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+#define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE  1
 #define CONVERT_UNSIGNED   2
@@ -74,7 +74,7 @@ int print_char(va_list ap, params_t *params);
 int print_int(va_list ap, params_t *params);
 int print_string(va_list ap, params_t *params);
 int print_percent(va_list ap, params_t *params);
-int print_s(va_list ap, params_t *params);
+int print_S(va_list ap, params_t *params);
 
 /* number.c module */
 char *convert(long int num, int base, int flags, params_t *params);
@@ -90,7 +90,7 @@ char *get_width(char *s, params_t *params, va_list ap);
 
 /* convert_number.c module */
 int print_hex(va_list ap, params_t *params);
-int print_Hex(va_list ap, params_t *params);
+int print_HEX(va_list ap, params_t *params);
 int print_binary(va_list ap, params_t *params);
 int print_octal(va_list ap, params_t *params);
 
@@ -107,7 +107,7 @@ int print_number_right_shift(char *str, params_t *params);
 int print_number_left_shift(char *str, params_t *params);
 
 /* params.c module */
-void int_params(params_t *params, va_list ap);
+void init_params(params_t *params, va_list ap);
 
 /* string_fields.c module */
 char *get_precision(char *p, params_t *params, va_list ap);

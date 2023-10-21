@@ -21,7 +21,6 @@ int print_from_to(char *start, char *stop, char *except)
 	return (sum);
 }
 
-
 /**
  * print_rev - prints string in reverse
  * @ap: string
@@ -30,7 +29,8 @@ int print_from_to(char *start, char *stop, char *except)
  * Return: number bytes printed
  */
 int print_rev(va_list ap, params_t *params)
-{int len, sum = 0;
+{
+	int len, sum = 0;
 	char *str = va_arg(ap, char *);
 	(void)params;
 

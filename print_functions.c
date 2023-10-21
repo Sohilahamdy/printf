@@ -22,7 +22,7 @@ int print_char(va_list ap, params_t *params)
 }
 
 /**
- * print_int - prints integeer
+ * print_int - prints integer
  * @ap: argument pointer
  * @params: the parameters struct
  *
