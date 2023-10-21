@@ -113,6 +113,6 @@ void int_params(params_t *params, va_list ap);
 char *get_precision(char *p, params_t *params, va_list ap);
 
 /* _printf.c module */
-int _printf(const char *format, ....);
+int _printf(const char *format, ...);
 
 #endif

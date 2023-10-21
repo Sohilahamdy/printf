@@ -7,7 +7,7 @@
  *
  * Return: void
  */
-void init _params(params_t *params, va_list ap)
+void init_params(params_t *params, va_list ap)
 {
 	params->unsign = 0;
 
@@ -20,7 +20,7 @@ void init _params(params_t *params, va_list ap)
 	params->width = 0;
 	params->precision = UINT_MAX;
 
+	params->l_modifier = 0;
 	params->h_modifier = 0;
-	params->i_modifier = 0;
 	(void)ap;
 }

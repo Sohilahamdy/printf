@@ -18,9 +18,9 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 		{"o", print_octal},
 		{"u", print_unsigned},
 		{"x", print_hex},
-		{"X", print_HEX},
+		{"X", print_Hex},
 		{"p", print_address},
-		{"s", print_S},
+		{"S", print_s},
 		{"r", print_rev},
 		{"R", print_rot13},
 		{NULL, NULL}
@@ -123,7 +123,7 @@ char *get_width(char *s, params_t *params, va_list ap)
 	if (*s == '*')
 	{
 		d = va_arg(ap, int);
-		s++
+		s++;
 	}
 	else
 	{

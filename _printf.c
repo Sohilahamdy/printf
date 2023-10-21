@@ -18,11 +18,11 @@ int _print(const char *format, ...)
 
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-	if (format[0] == '%' && format[1] == ' ' && !fprmat[2])
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
 	for (p = (char *)format; *p; p++)
 	{
-		init params(&params, ap);
+		int params(&params, ap);
 		if (*p != '%')
 		{
 			sum += _putchar(*p);
@@ -30,17 +30,17 @@ int _print(const char *format, ...)
 		}
 		start = p;
 		p++;
-		while (get flag(p, &params)) /* while char at p is flag char */
+		while (get_flag(p, &params)) /* while char at p is flag char */
 		{
 			p++; /* next char */
 		}
-		p = get_width(p, &paams, ap);
+		p = get_width(p, &params, ap);
 		p = get_precision(p, &paams, ap);
 		if (get_modifier(p, &params))
 			p++;
 		if (!get_specifier(p))
 			sum += print_from_to(start, p,
-					params.1_modifier || params.h_modifier ? p - 1 : 0);
+					params.l_modifier || params.h_modifier ? p - 1 : 0);
 		else
 			sum += get_print_func(p, ap, &params);
 	}
